@@ -1,0 +1,98 @@
+Court,Datum,Uhrzeit,Spieldauer,Preis,Tag
+Padel Halle 3,2025-01-27,21:30:00,90,48 EUR,Monday
+Padel Halle 3,2025-01-30,21:30:00,90,48 EUR,Thursday
+Padel Halle 1,2025-02-01,18:30:00,90,48 EUR,Saturday
+Padel Halle 1,2025-02-01,18:30:00,120,64 EUR,Saturday
+Padel Halle 1,2025-02-01,19:30:00,90,48 EUR,Saturday
+Padel Halle 1,2025-02-01,20:00:00,120,64 EUR,Saturday
+Padel Halle 1,2025-02-01,20:30:00,90,48 EUR,Saturday
+Padel Halle 2 ,2025-02-01,20:30:00,90,48 EUR,Saturday
+Padel Halle 2 ,2025-02-03,21:00:00,120,64 EUR,Monday
+Padel Halle 3,2025-02-03,21:30:00,90,48 EUR,Monday
+Padel Halle 1,2025-02-04,21:00:00,120,64 EUR,Tuesday
+Padel Halle 2 ,2025-02-04,20:30:00,90,48 EUR,Tuesday
+Padel Halle 2 ,2025-02-04,21:30:00,90,48 EUR,Tuesday
+Padel Halle 3,2025-02-05,21:00:00,120,64 EUR,Wednesday
+Padel Halle 3,2025-02-06,21:30:00,90,48 EUR,Thursday
+Padel Halle 1,2025-02-07,21:30:00,90,48 EUR,Friday
+Padel Halle 1,2025-02-08,18:00:00,90,48 EUR,Saturday
+Padel Halle 1,2025-02-08,18:00:00,120,64 EUR,Saturday
+Padel Halle 1,2025-02-08,19:00:00,90,48 EUR,Saturday
+Padel Halle 1,2025-02-08,19:00:00,120,64 EUR,Saturday
+Padel Halle 1,2025-02-08,19:30:00,90,48 EUR,Saturday
+Padel Halle 1,2025-02-08,20:00:00,120,64 EUR,Saturday
+Padel Halle 1,2025-02-08,20:30:00,90,48 EUR,Saturday
+Padel Halle 2 ,2025-02-08,18:00:00,90,48 EUR,Saturday
+Padel Halle 2 ,2025-02-08,18:00:00,120,64 EUR,Saturday
+Padel Halle 2 ,2025-02-08,18:30:00,90,48 EUR,Saturday
+Padel Halle 2 ,2025-02-08,18:30:00,120,64 EUR,Saturday
+Padel Halle 2 ,2025-02-08,19:00:00,90,48 EUR,Saturday
+Padel Halle 2 ,2025-02-08,19:00:00,120,64 EUR,Saturday
+Padel Halle 2 ,2025-02-08,19:30:00,90,48 EUR,Saturday
+Padel Halle 2 ,2025-02-08,20:00:00,120,64 EUR,Saturday
+Padel Halle 2 ,2025-02-08,20:30:00,90,48 EUR,Saturday
+Padel Halle 3,2025-02-08,18:00:00,90,48 EUR,Saturday
+Padel Halle 3,2025-02-08,18:00:00,120,64 EUR,Saturday
+Padel Halle 3,2025-02-08,18:30:00,90,48 EUR,Saturday
+Padel Halle 3,2025-02-08,18:30:00,120,64 EUR,Saturday
+Padel Halle 3,2025-02-08,19:00:00,90,48 EUR,Saturday
+Padel Halle 3,2025-02-08,19:00:00,120,64 EUR,Saturday
+Padel Halle 3,2025-02-08,19:30:00,90,48 EUR,Saturday
+Padel Halle 3,2025-02-08,20:00:00,120,64 EUR,Saturday
+Padel Halle 3,2025-02-08,20:30:00,90,48 EUR,Saturday
+Padel Halle 2 ,2025-02-10,21:00:00,120,64 EUR,Monday
+Padel Halle 3,2025-02-10,21:30:00,90,48 EUR,Monday
+Padel Halle 1,2025-02-11,21:30:00,90,48 EUR,Tuesday
+Padel Halle 3,2025-02-12,21:00:00,120,64 EUR,Wednesday
+Padel Halle 2 ,2025-02-12,21:00:00,120,64 EUR,Wednesday
+Padel Halle 2 ,2025-02-13,20:30:00,90,48 EUR,Thursday
+Padel Halle 2 ,2025-02-13,21:30:00,90,48 EUR,Thursday
+Padel Halle 3,2025-02-14,20:30:00,90,48 EUR,Friday
+Padel Halle 3,2025-02-14,21:30:00,90,48 EUR,Friday
+Padel Halle 2 ,2025-02-14,21:00:00,120,64 EUR,Friday
+Padel Halle 3,2025-02-17,21:30:00,90,48 EUR,Monday
+Padel Halle 2 ,2025-02-18,20:30:00,90,48 EUR,Tuesday
+Padel Halle 2 ,2025-02-18,21:30:00,90,48 EUR,Tuesday
+Padel Halle 1,2025-02-18,20:00:00,90,48 EUR,Tuesday
+Padel Halle 1,2025-02-18,20:00:00,120,64 EUR,Tuesday
+Padel Halle 1,2025-02-18,21:00:00,120,64 EUR,Tuesday
+Padel Halle 1,2025-02-18,21:30:00,90,48 EUR,Tuesday
+Padel Halle 2 ,2025-02-19,21:00:00,120,64 EUR,Wednesday
+Padel Halle 3,2025-02-19,21:00:00,120,64 EUR,Wednesday
+Padel Halle 2 ,2025-02-20,20:30:00,90,48 EUR,Thursday
+Padel Halle 2 ,2025-02-20,21:30:00,90,48 EUR,Thursday
+Padel Halle 3,2025-02-20,21:00:00,120,64 EUR,Thursday
+Padel Halle 1,2025-02-21,20:00:00,90,48 EUR,Friday
+Padel Halle 1,2025-02-21,20:00:00,120,64 EUR,Friday
+Padel Halle 1,2025-02-21,21:00:00,120,64 EUR,Friday
+Padel Halle 1,2025-02-21,21:30:00,90,48 EUR,Friday
+Padel Halle 2 ,2025-02-21,21:30:00,90,48 EUR,Friday
+Padel Halle 3,2025-02-21,21:00:00,120,64 EUR,Friday
+Padel Halle 2 ,2025-02-22,18:00:00,90,48 EUR,Saturday
+Padel Halle 2 ,2025-02-22,18:00:00,120,64 EUR,Saturday
+Padel Halle 2 ,2025-02-22,18:30:00,90,48 EUR,Saturday
+Padel Halle 2 ,2025-02-22,18:30:00,120,64 EUR,Saturday
+Padel Halle 2 ,2025-02-22,19:00:00,90,48 EUR,Saturday
+Padel Halle 2 ,2025-02-22,19:00:00,120,64 EUR,Saturday
+Padel Halle 2 ,2025-02-22,19:30:00,90,48 EUR,Saturday
+Padel Halle 2 ,2025-02-22,20:00:00,120,64 EUR,Saturday
+Padel Halle 2 ,2025-02-22,20:30:00,90,48 EUR,Saturday
+Padel Halle 1,2025-02-22,18:00:00,90,48 EUR,Saturday
+Padel Halle 1,2025-02-22,18:00:00,120,64 EUR,Saturday
+Padel Halle 1,2025-02-22,18:30:00,90,48 EUR,Saturday
+Padel Halle 1,2025-02-22,18:30:00,120,64 EUR,Saturday
+Padel Halle 1,2025-02-22,19:00:00,90,48 EUR,Saturday
+Padel Halle 1,2025-02-22,19:00:00,120,64 EUR,Saturday
+Padel Halle 1,2025-02-22,19:30:00,90,48 EUR,Saturday
+Padel Halle 1,2025-02-22,20:00:00,120,64 EUR,Saturday
+Padel Halle 1,2025-02-22,20:30:00,90,48 EUR,Saturday
+Padel Halle 3,2025-02-22,18:00:00,90,48 EUR,Saturday
+Padel Halle 3,2025-02-22,18:00:00,120,64 EUR,Saturday
+Padel Halle 3,2025-02-22,18:30:00,90,48 EUR,Saturday
+Padel Halle 3,2025-02-22,18:30:00,120,64 EUR,Saturday
+Padel Halle 3,2025-02-22,19:00:00,90,48 EUR,Saturday
+Padel Halle 3,2025-02-22,19:00:00,120,64 EUR,Saturday
+Padel Halle 3,2025-02-22,19:30:00,90,48 EUR,Saturday
+Padel Halle 3,2025-02-22,20:00:00,120,64 EUR,Saturday
+Padel Halle 3,2025-02-22,20:30:00,90,48 EUR,Saturday
+Padel Halle 3,2025-02-24,21:30:00,90,48 EUR,Monday
