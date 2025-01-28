@@ -1,4 +1,7 @@
-# Playtomic_Sniping_Bot
+# Playtomic-Sniping-Bot
+
+![Padelbot](logo.jpg)
+
 A bot that specifically recognizes free slots in Playtomic and draws the user's attention to them by e-mail. Filter criteria can be used to configure the times and duration searched for as well as preferred courts. Can be operated both locally and via GitHub Actions. 
 
 The following must be considered in order to use it:
