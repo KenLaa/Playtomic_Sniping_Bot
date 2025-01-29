@@ -45,7 +45,7 @@ def get_login_playtomic():
         return username, password
     
     else:
-        with open("C:/Users/Ken/Code/Playtomic_Bot/config.json", "r") as file:
+        with open(script_dir/ "config.json", "r") as file:
             config = json.load(file)
             username = config["username_playtomic"]
             password = config["password_playtomic"]
@@ -66,7 +66,7 @@ def get_login_mail_sender():
         password = os.getenv('PASSWORD_MAIL_SENDER')
         return username, password
     else:
-        with open("C:/Users/Ken/Code/Playtomic_Bot/config.json", "r") as file:
+        with open(script_dir/ "config.json", "r") as file:
             config = json.load(file)
             username = config["username_mail_sender"]
             password = config["password_mail_sender"]
@@ -482,16 +482,16 @@ def find_new_slots(new_df, storage_file_path):
     
     # TEST
     # Beispiel-Test-Zeile hinzufügen
-    # test_row = pd.DataFrame({
-    #     'Court': ['This is a test.'],
-    #     'Datum': ['2025-02-05'],
-    #     'Uhrzeit': ['18:30:00'],
-    #     'Spieldauer': [90],
-    #     'Preis': ['46 EUR']
-    # })
+    test_row = pd.DataFrame({
+        'Court': ['This is a test.'],
+        'Datum': ['2025-02-05'],
+        'Uhrzeit': ['18:30:00'],
+        'Spieldauer': [90],
+        'Preis': ['46 EUR']
+    })
 
-    # # Füge die Test-Zeile zu new_df hinzu
-    # new_df = pd.concat([new_df, test_row], ignore_index=True)
+    # Füge die Test-Zeile zu new_df hinzu
+    new_df = pd.concat([new_df, test_row], ignore_index=True)
 
     # Konvertiere 'Datum' in datetime
     old_df['Datum'] = pd.to_datetime( old_df['Datum'])
