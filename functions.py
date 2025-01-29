@@ -18,7 +18,6 @@ from pathlib import Path
 - 
 """
 
-STORAGE_FILE = "freie_plaetze.csv"
 tenant_id_mannheim = "5bb4ad71-dbd9-499e-88fb-c9a5e7df6db6"
 tenant_id_ubstadt = "e3acb6b7-c7c5-42c0-ae6f-99d546cabce6"
 
