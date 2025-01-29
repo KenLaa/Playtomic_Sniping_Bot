@@ -4,6 +4,9 @@ import os
 from pathlib import Path
 import json
 
+
+script_dir = Path(__file__).parent
+
 # Prüfen, ob wir in GitHub Actions oder lokal laufen
 if os.getenv("GITHUB_ACTIONS"):
      # Anmeldedaten aus Umgebungsvariablen (für GitHub Actions)
@@ -11,7 +14,7 @@ if os.getenv("GITHUB_ACTIONS"):
     recipients_ubstadt = os.getenv('RECIPIENTS_UBSTADT')
 else:
     # Lokaler Pfad
-    with open("C:/Users/Ken/Code/Playtomic_Bot/config.json", "r") as file:
+    with open(script_dir/ "config.json", "r") as file:
         config = json.load(file)
         recipients_mannheim = config["recipients_mannheim"]
         recipients_ubstadt = config["recipients_ubstadt"]
