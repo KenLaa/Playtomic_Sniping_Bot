@@ -1,0 +1,114 @@
+import pandas as pd
+from functions import search_for_free_padel_slots, send_email, find_new_slots
+import os
+from pathlib import Path
+import json
+
+# Prüfen, ob wir in GitHub Actions oder lokal laufen
+if os.getenv("GITHUB_ACTIONS"):
+     # Anmeldedaten aus Umgebungsvariablen (für GitHub Actions)
+    recipients_mannheim = os.getenv('RECIPIENTS_MANNHEIM')
+    recipients_ubstadt = os.getenv('RECIPIENTS_UBSTADT')
+else:
+    # Lokaler Pfad
+    with open("C:/Users/Ken/Code/Playtomic_Bot/config.json", "r") as file:
+        config = json.load(file)
+        recipients_mannheim = config["recipients_mannheim"]
+        recipients_ubstadt = config["recipients_ubstadt"]
+
+script_dir = Path(__file__).parent
+storage_file_path_mannheim = script_dir / "freie_plaetze_mannheim.csv"
+storage_file_path_ubstadt = script_dir / "freie_plaetze_ubstadt.csv"
+
+# Setze Parameter für Filterung der verfügbaren Slots
+start_time = "18:00:00"
+days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+court_names_mannheim = [
+    "Padel 1 indoor",
+    "Padel 2 indoor",
+    "Padel 3 indoor",
+    "Padel 4 indoor",
+    "Padel 5 Indoor",
+    "Padel 6 Indoor",
+    "Padel 7 Indoor",
+    "Padel 8 Indoor",
+    "Padel 9 Indoor"
+]
+court_names_ubstadt = ["Padel Halle 1","Padel Halle 2 ","Padel Halle 3"]
+tenant_id_mannheim = "5bb4ad71-dbd9-499e-88fb-c9a5e7df6db6"
+tenant_id_ubstadt = "e3acb6b7-c7c5-42c0-ae6f-99d546cabce6"
+url_mannheim = "https://playtomic.io/maba-padel-mannheim-gmbh/5bb4ad71-dbd9-499e-88fb-c9a5e7df6db6?q=PADEL~2024-10-03~~~"
+url_ubstadt = "https://playtomic.io/gartner-sportpark/e3acb6b7-c7c5-42c0-ae6f-99d546cabce6?q=PADEL~2025-01-22~~~"
+min_duration = 90
+
+if __name__ == "__main__":
+
+    # Suche nach neuen Plätzen in Mannheim
+    df_mannheim = search_for_free_padel_slots(
+        start_time,
+        court_names_mannheim,
+        days,
+        min_duration,
+        url_mannheim,
+        tenant_id_mannheim,
+    )
+    pd.set_option("display.colheader_justify", "center")
+    if not df_mannheim.empty:
+        print("Die folgenden Slots in Mannheim entsprechen den Filterkriterien:")
+        df_mannheim = df_mannheim.reset_index(drop=True)
+        print(df_mannheim.to_string(index=False))
+    else:
+        print(
+            "Es wurden keine Slots in Mannheim gefunden, die den Filterkriterien entsprechen."
+        )
+
+    # Abgleich
+    diff_df_mannheim = find_new_slots(df_mannheim, storage_file_path_mannheim)
+    if not diff_df_mannheim.empty:
+        print("Die folgenden neuen Slots in Mannheim entsprechen den Filterkriterien:")
+        print(diff_df_mannheim.to_string(index=False))
+        send_email(
+            diff_df_mannheim,
+            subject="Padel-Tennisplatz in Mannheim gefunden!",
+            recipients=recipients_mannheim,
+            location="Mannheim"
+        )
+    else:
+        print(
+            "Es wurden keine neuen in Mannheim Slots gefunden, die den Filterkriterien entsprechen. Keine E-Mail gesendet."
+        )
+
+    # # Suche nach neuen Plätzen in Ubstadt
+    df = search_for_free_padel_slots(
+        start_time,
+        court_names_ubstadt,
+        days,
+        min_duration,
+        url_ubstadt,
+        tenant_id_ubstadt,
+    )
+    pd.set_option("display.colheader_justify", "center")
+    if not df.empty:
+        print("Die folgenden Slots in Ubstadt entsprechen den Filterkriterien:")
+        df = df.reset_index(drop=True)
+        print(df.to_string(index=False))
+    else:
+        print(
+            "Es wurden keine Slots in Ubstadt gefunden, die den Filterkriterien entsprechen."
+        )
+
+    # Abgleich
+    diff_df = find_new_slots(df, storage_file_path_ubstadt)
+    if not diff_df.empty:
+        print("Die folgenden neuen Slots in Ubstadt entsprechen den Filterkriterien:")
+        print(diff_df.to_string(index=False))
+        send_email(
+            diff_df,
+            subject="Padel-Tennisplatz in Ubstadt gefunden!",
+            recipients=recipients_ubstadt,
+            location="Ubstadt"
+        )
+    else:
+        print(
+            "Es wurden keine neuen Slots in Ubstadt gefunden, die den Filterkriterien entsprechen. Keine E-Mail gesendet."
+        )
