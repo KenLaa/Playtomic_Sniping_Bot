@@ -18,15 +18,27 @@ from pathlib import Path
 - 
 """
 
-tenant_id_mannheim = "5bb4ad71-dbd9-499e-88fb-c9a5e7df6db6"
-tenant_id_ubstadt = "e3acb6b7-c7c5-42c0-ae6f-99d546cabce6"
-
 url_mannheim = "https://playtomic.io/maba-padel-mannheim-gmbh/5bb4ad71-dbd9-499e-88fb-c9a5e7df6db6?q=PADEL~2024-10-03~~~"
 url_ubstadt = "https://playtomic.io/gartner-sportpark/e3acb6b7-c7c5-42c0-ae6f-99d546cabce6?q=PADEL~2025-01-22~~~"
 
 script_dir = Path(__file__).parent
 
 logo_dir = script_dir / "logo.jpg"
+
+def get_tenant_id(url):
+    pattern = r"https://playtomic\.io/[^/]+/([0-9a-fA-F-]+)"
+
+    # Suche nach der Tenant-ID
+    match = re.search(pattern, url)
+
+    if match:
+        tenant_id = match.group(1)
+        return tenant_id
+    else:
+        print("Keine Tenant-ID gefunden.")
+
+tenant_id_mannheim = get_tenant_id(url_mannheim)
+tenant_id_ubstadt = get_tenant_id(url_ubstadt)
 
 def get_login_playtomic():
     """Lädt Login-Daten für Playtomic aus config-JSON.
@@ -109,8 +121,8 @@ def get_court_mapping(url, tenant_id):
     """_summary_
 
     Args:
-        url (_type_): _description_
-        tenant_id (_type_): _description_
+        url (_type_): URL der Buchungsseite des Playtomic-Clubs.
+        tenant_id (_type_): tenant_id des Playtomics-Clubs ()
 
     Returns:
         _type_: _description_
@@ -481,16 +493,16 @@ def find_new_slots(new_df, storage_file_path):
     
     # TEST
     # Beispiel-Test-Zeile hinzufügen
-    test_row = pd.DataFrame({
-        'Court': ['This is a test.'],
-        'Datum': ['2025-02-05'],
-        'Uhrzeit': ['18:30:00'],
-        'Spieldauer': [90],
-        'Preis': ['46 EUR']
-    })
+    # test_row = pd.DataFrame({
+    #     'Court': ['This is a test.'],
+    #     'Datum': ['2025-02-05'],
+    #     'Uhrzeit': ['18:30:00'],
+    #     'Spieldauer': [90],
+    #     'Preis': ['46 EUR']
+    # })
 
-    # Füge die Test-Zeile zu new_df hinzu
-    new_df = pd.concat([new_df, test_row], ignore_index=True)
+    # # Füge die Test-Zeile zu new_df hinzu
+    # new_df = pd.concat([new_df, test_row], ignore_index=True)
 
     # Konvertiere 'Datum' in datetime
     old_df['Datum'] = pd.to_datetime( old_df['Datum'])
