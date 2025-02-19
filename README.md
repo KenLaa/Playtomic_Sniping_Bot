@@ -2,11 +2,12 @@
 
 ![Padelbot](logo.jpg)
 
-A bot that specifically recognizes free slots in Playtomic and draws the user's attention to them by e-mail. Filter criteria can be used to configure the times and duration searched for as well as preferred courts. Can be operated both locally and via GitHub Actions. 
+This bot detects available time slots on Playtomic and notifies the user via email when matching slots are found. You can configure filter criteria to search for specific times, durations, and preferred courts. The bot can be run either locally or through GitHub Actions.
 
-The following must be considered in order to use it:
-- Write the necessary data in the config file (if the bot is to be operated locally)
-- Store the necessary secrets in Github (if the bot is to run in GitHub Actions)
-- The bot is in German by default, so adjust the mail notification in the language of your choice if necessary. 
-- Customize the Playtomic-Booking URL of your club (@main.py).
-- Set the filter criteria by setting parameters for start_time, days, court_names and min_duration. 
+Important considerations for usage:
+
+- Enter the required data in the config file if the bot is to be run locally.
+- Store the necessary secrets in GitHub if the bot is to run via GitHub Actions.
+- The bot is set to German by default, so make sure to adjust the email notification language if necessary.
+- Customize the Playtomic booking URL for your club in the @main.py file.
+- Set the filter criteria by defining parameters like start_time, days, court_names, and min_duration.
